@@ -40,6 +40,11 @@ header .menu ol {
   list-style: none;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
 main .last-news .last-news__figure {
   margin: 0 0 2rem 0;
 }
@@ -70,6 +75,34 @@ main .last-news .last-news__link {
   letter-spacing: 0.5rem;
   text-decoration: none;
   color: hsl(36deg, 100%, 99%);
+}
+main .secondary-news {
+  padding: 2.4rem;
+  background-color: hsl(240deg, 100%, 5%);
+}
+main .secondary-news .secondary-news__title {
+  font-size: 3.2rem;
+  color: hsl(35deg, 77%, 62%);
+}
+main .secondary-news .secondary-news__item {
+  padding: 3rem 0;
+  border-bottom: 0.1rem solid hsl(236deg, 13%, 42%);
+  color: hsl(36deg, 100%, 99%);
+}
+main .secondary-news .secondary-news__item:last-child {
+  padding: 3rem 0 0 0;
+  border: 0;
+}
+main .secondary-news .secondary-news__item .secondary-new__title {
+  margin: 0 0 1.2rem 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+main .secondary-news .secondary-news__item .secondary-new__description {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: hsl(236deg, 13%, 42%);
 }
 
 .attribution {

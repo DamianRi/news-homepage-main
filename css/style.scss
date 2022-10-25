@@ -50,6 +50,10 @@ header {
 }
 
 main {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+
   & .last-news {
     & .last-news__figure {
       margin: 0 0 2rem 0;
@@ -81,6 +85,34 @@ main {
       letter-spacing: 0.5rem;
       text-decoration: none;
       color: $off-white;
+    }
+  }
+  .secondary-news {
+    padding: 2.4rem;
+    background-color: $very-dark-blue;
+    .secondary-news__title {
+      font-size: 3.2rem;
+      color: $soft-orange;
+    }
+    .secondary-news__item {
+      padding: 3rem 0;
+      border-bottom: 0.1rem solid $dark-grayish-blue;
+      color: $off-white;
+      &:last-child {
+        padding: 3rem 0 0 0;
+        border: 0;
+      }
+      .secondary-new__title {
+        margin: 0 0 1.2rem 0;
+        font-size: 2rem;
+        font-weight: 700;
+      }
+      .secondary-new__description {
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 1.6;
+        color: $dark-grayish-blue;
+      }
     }
   }
 }
