@@ -8,7 +8,6 @@
 }
 
 body {
-  padding: 1.6rem;
   font-family: "Inter", sans-serif;
 }
 
@@ -16,6 +15,7 @@ header {
   display: flex;
   justify-content: space-between;
   min-height: 7rem;
+  padding: 1.6rem;
 }
 header .logo {
   display: inline-block;
@@ -41,9 +41,10 @@ header .menu ol {
 }
 
 main {
-  display: flex;
-  flex-direction: column;
-  gap: 6rem;
+  padding: 0.5rem 1.6rem;
+}
+main > * {
+  margin: 0 0 6.4rem 0;
 }
 main .last-news .last-news__figure {
   margin: 0 0 2rem 0;
@@ -104,10 +105,54 @@ main .secondary-news .secondary-news__item .secondary-new__description {
   line-height: 1.6;
   color: hsl(236deg, 13%, 42%);
 }
+main .top-news {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+main .top-news .top-new {
+  display: grid;
+  grid-template-columns: 10rem repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  -moz-column-gap: 2.4rem;
+       column-gap: 2.4rem;
+  row-gap: 0.8rem;
+  height: 12rem;
+}
+main .top-news .top-new figure {
+  grid-column: 1/2;
+  grid-row: 1/4;
+}
+main .top-news .top-new figure .top-new__img {
+  width: 100%;
+  height: 100%;
+}
+main .top-news .top-new .top-new__number {
+  grid-column: 2/5;
+  grid-row: 1/2;
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: hsl(233deg, 8%, 79%);
+}
+main .top-news .top-new .top-new__name {
+  grid-column: 2/5;
+  grid-row: 2/3;
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+main .top-news .top-new .top-new__description {
+  grid-column: 2/5;
+  grid-row: 3/4;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: hsl(236deg, 13%, 42%);
+}
 
 .attribution {
   font-size: 11px;
   text-align: center;
+  height: 5vh;
+  padding: 1rem 0;
 }
 
 .attribution a {
