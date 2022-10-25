@@ -35,9 +35,57 @@ header .menu .menu-icon {
   background-position: center;
   background-repeat: no-repeat;
 }
-header .menu ol {
+header .menu .menu-section {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transition-duration: 300ms;
+}
+header .menu .menu-section.hide {
   display: none;
+}
+header .menu .menu-section .menu-section__left {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 30%;
+  height: 100%;
+  background-color: hsl(240deg, 100%, 5%);
+  opacity: 0.5;
+}
+header .menu .menu-section .menu-section__right {
+  position: fixed;
+  width: 70%;
+  height: 100%;
+  right: 0;
+  padding: 2.4rem;
+  background-color: hsl(36deg, 100%, 99%);
+}
+header .menu .menu-section .menu-section__right .menu-options {
+  margin: 12rem 0 0 0;
+  padding: 0;
+  width: 100%;
   list-style: none;
+}
+header .menu .menu-section .menu-section__right .menu-options li {
+  font-size: 1.8rem;
+  height: 4rem;
+}
+header .menu .menu-section .menu-section__right .menu-options__close-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  width: 3.2rem;
+  height: 3.2rem;
+  margin: 2.4rem;
+  background-image: url("../assets/images/icon-menu-close.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 main {
