@@ -213,8 +213,12 @@ main .top-news .top-new .top-new__description {
 
 @media screen and (min-width: 600px) {
   header {
-    padding: 5rem 10rem 0;
+    padding: 8rem 16rem 4rem;
     min-height: 5rem;
+  }
+  header .logo {
+    width: 6.4rem;
+    height: 6.4rem;
   }
   header .menu {
     width: -webkit-fit-content;
@@ -249,8 +253,8 @@ main .top-news .top-new .top-new__description {
     justify-content: center;
     align-items: center;
     margin: 0;
-    height: 4.8rem;
-    gap: 2.4rem;
+    height: 6.4rem;
+    gap: 4rem;
   }
   header .menu .menu-section .menu-section__right .menu-options li {
     width: -webkit-fit-content;
@@ -259,10 +263,44 @@ main .top-news .top-new .top-new__description {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: hsl(236deg, 13%, 42%);
   }
   header .menu .menu-section .menu-section__right .menu-options li:hover {
     color: hsl(5deg, 85%, 63%);
+  }
+  main {
+    display: grid;
+    grid-template-areas: "last last last other" "last last last other" "last last last other" "tops tops tops tops";
+    gap: 3.2rem;
+    padding: 0 16rem;
+  }
+  main .last-news {
+    grid-area: last;
+    grid-template-columns: 1/4;
+    grid-template-rows: 1/4;
+  }
+  main .last-news .last-news__figure {
+    width: 100%;
+    height: 35%;
+  }
+  main .last-news .last-news__figure img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 0 0;
+       object-position: 0 0;
+  }
+  main .secondary-news {
+    grid-area: other;
+    grid-template-columns: 3/4;
+    grid-template-rows: 1/3;
+  }
+  main .top-news {
+    grid-area: tops;
+    grid-template-columns: 1/4;
+    grid-template-rows: 3/4;
+    flex-direction: row;
   }
 }/*# sourceMappingURL=style.css.map */
