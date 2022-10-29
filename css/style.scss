@@ -201,6 +201,10 @@ main {
       grid-row: 2 / 3;
       font-size: 1.8rem;
       font-weight: 800;
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
     }
     .top-new__description {
       grid-column: 2 / 5;
@@ -275,9 +279,10 @@ main {
   }
   main {
     display: grid;
-    grid-template-areas: "last last other"
-                         "last last other"
-                         "tops tops tops";
+    grid-template-areas:
+      "last last other"
+      "last last other"
+      "tops tops tops";
     gap: 3.2rem;
     row-gap: 5.6rem;
     padding: 0 15rem 10rem;
@@ -321,6 +326,19 @@ main {
     .secondary-news {
       grid-area: other;
       height: fit-content;
+      .secondary-news__item {
+        .secondary-new__title:hover {
+          cursor: pointer;
+          color: $soft-orange;
+        }
+      }
+    }
+    .top-new {
+      .top-new__name {
+        a:hover {
+          color: $soft-red;
+        }
+      }
     }
   }
 }
